@@ -13,9 +13,7 @@ app.get('/',(req, res) => {
   res.send('Hello World!')
 });
 
-app.post('/welcome', auth, (req, res) => {
-  res.send('Hello World!');
-});
+app.post('/welcome', auth, routes.welcome);
 
 app.post('/createUser', routes.createUser);
 
