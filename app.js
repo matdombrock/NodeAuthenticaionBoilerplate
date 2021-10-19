@@ -21,10 +21,6 @@ app.post('/createUser', routes.createUser);
 
 app.post('/login', routes.login);
 
-app.post('/getUsers', auth, routes.getUsers);
-
-app.post('/tokenTest', routes.tokenTest);
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
