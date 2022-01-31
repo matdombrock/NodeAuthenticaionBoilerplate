@@ -1,6 +1,8 @@
+const config = require('./config');
+
 const express = require('express')
 const app = express()
-const port = 3000
+const port = config.port ? config.port : 3000;
 
 const routes = require('./routes');
 
