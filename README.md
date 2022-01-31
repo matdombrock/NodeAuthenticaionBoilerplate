@@ -1,5 +1,5 @@
 # Express Authentication Boilerplate
-This is a minimalist authentication boilerplate for an Express API. Passwords are fully hashed and authentication is done via JWT. Endpoints for creating users, logging in ect. are already in place. This project uses Sequelize as an ORM with a simple SQLite database implementation containing only a `users` table. 
+This is a minimalist authentication boilerplate for an Express API. Passwords are hashed and authentication is done via JWT. Endpoints for creating users, logging in ect. are already in place. This project uses Sequelize as an ORM with a simple SQLite database implementation containing only a `users` table. 
 
 ## Requirements
 * bcrypt
