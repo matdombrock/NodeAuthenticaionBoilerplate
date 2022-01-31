@@ -50,3 +50,16 @@ Input:
 - token <JWT>
 
 Outputs a welcome message containing the logged in user name. 
+
+## Config
+This server can be configured with the `config.js` file in the root of project. 
+
+```js
+module.exports = {
+  port: 3000,
+  log_requests_to_console: true,
+  db_logging: true
+}
+```
+
+The properties should be self explanatory. 
