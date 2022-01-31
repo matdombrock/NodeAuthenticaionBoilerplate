@@ -10,10 +10,43 @@ This is a minimalist authentication boilerplate for an Express API. Passwords ar
 
 ## Getting Started
 1) Clone the project.
-2) Run `npm install`
+2) Run `npm install`.
 3) Create a file called `key.js` in the `/jwt/` directory.
 This key should look something like this (this should be a random string):
 ```js
 module.exports = 'key123';
 ```
-4) Run with `node app`
+4) Create the SQLite DB with `node _syncTables`.
+5) Run with `node app`.
+6) You can now test the service via software like Postman.
+
+## Endpoints
+
+### `GET /`
+Returns "Hello World"
+
+### `POST /login`
+Attempts a login request. 
+
+Input:
+- username <string>
+- password <string>
+
+Outputs a JWT if successful and returns 401 if not.
+
+### `POST /createUser`
+Creates a new user for the system.
+
+Input:
+- username <string>
+- password <string>
+
+Outputs a JWT if successful and returns 403 if not.
+
+### `POST /welcome`
+Attempts to to show a welcome message. Used for checking successful login.
+
+Input:
+- token <JWT>
+
+Outputs a welcome message containing the logged in user name. 
