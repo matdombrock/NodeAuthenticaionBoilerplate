@@ -1,7 +1,7 @@
 const jwt = require('../jwt');
 
 const verifyToken = (req, res, next) => {
-  const token = req.query.token;
+  const token = req.body.token;
 
   if (!token) {
     return res.status(403).send("A token is required for authentication");
