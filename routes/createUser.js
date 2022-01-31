@@ -3,8 +3,8 @@ const db = require('../db');
 const jwt = require('../jwt');
 
 module.exports = async (req, res) => { 
-  const username = req.query.username;
-  let password = req.query.password;
+  const username = req.body.username;
+  let password = req.body.password;
   if(!username || !password){
     res.status(403).send('Missing Credentials!');
     return;
